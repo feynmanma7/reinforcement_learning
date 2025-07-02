@@ -6,7 +6,8 @@ from tqdm import tqdm
 up-left is (0, 0)
 
 0 0 0 0 0
-0 0 0 0 0 
+0 0 0 0 0
+
 0 0 0 0 0
 s c c c goal
 
