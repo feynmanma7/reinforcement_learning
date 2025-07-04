@@ -146,7 +146,9 @@ def test_dqn():
 
                 while not done:
                     action = agent.take_action(state)
-                    next_state, reward, done, _, _ = env.step(action)
+                    #next_state, reward, done, _, _ = env.step(action)
+                    next_state, reward, terminated, truncated, _ = env.step(action)
+                    done = terminated or truncated
                     next_state = np.array(next_state, dtype=np.float32)
                     replay_buffer.add(state, action, reward, next_state, done)
                     state = next_state
